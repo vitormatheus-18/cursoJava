@@ -1,22 +1,22 @@
+package Pets;
 import javax.swing.JOptionPane;
 
-public class Gato {
-    
+public class Dog {
     private String Nome;
-    private int Idade;
+    private String Idade;
 
-    public Gato(String nome, int idade) {
+    public Dog(String nome, String idade) {
         Nome = nome;
         Idade = idade;
     }
 
 
-    public int getIdade() {
+    public String getIdade() {
         return Idade;
     }
 
 
-    public void setIdade(int idade) {
+    public void setIdade(String idade) {
         this.Idade = idade;
     }
 
@@ -31,8 +31,7 @@ public class Gato {
     }
 
 
-    public void emitirSom(){
-        JOptionPane.showMessageDialog(null, "MIAU!", "PET", JOptionPane.PLAIN_MESSAGE);
-
+    public void emitirSom() {
+        JOptionPane.showMessageDialog(null, "AUAU!", "PET", JOptionPane.PLAIN_MESSAGE);
     }
 }
