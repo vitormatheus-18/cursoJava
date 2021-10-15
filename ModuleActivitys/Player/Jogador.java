@@ -35,7 +35,6 @@ public class Jogador {
 
     }
 
-
     private void setDate(LocalDate date) {
         this.Date = date;
     }
@@ -44,11 +43,12 @@ public class Jogador {
 
         Cartoes = cartoes;
         Suspenso = suspenso;
+
         if(Cartoes >= 3){
             Suspenso = true;
-            System.out.println(Nome + ", " + "camisa: " + Numero + ", " + Posicao + ", Condição: este Jogador está suspenso");
+            System.out.println(Numero + " - " + Nome + " - " + LocalDate.now() + ", Condição: este Jogador está suspenso");
         }else 
-            System.out.println(Nome + ", " + "camisa: " + Numero + ", " + Posicao + ", Condição: este Jogador está disponível");
+            System.out.println(Numero + " - " + Nome + " - " + LocalDate.now() + ", Condição: este Jogador está disponível");
     }
 
 
