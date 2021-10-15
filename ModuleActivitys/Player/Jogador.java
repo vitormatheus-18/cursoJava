@@ -1,4 +1,6 @@
-package Player;
+
+import java.time.LocalDate;
+
 import javax.swing.JOptionPane;
 
 public class Jogador {
@@ -6,7 +8,7 @@ public class Jogador {
     private int Id;
     private String Nome;
     private String Apelido;
-    // private date DataDeNascimento;
+    LocalDate Date;
     private int Numero;
     private String Posicao;
     private int Qualidade;
@@ -18,29 +20,37 @@ public class Jogador {
     
     }
 
-    public Jogador(int id, String nome, String apelido, 
-    int numero, String posicao,
+    public Jogador(int id, String nome, String apelido, LocalDate date ,int numero, String posicao,
     int qualidade, int cartoes, boolean suspenso) {
 
         Id = id;
         Nome = nome;
         Apelido = apelido;
-        
+        setDate(date);
         Numero = numero;
         Posicao = posicao;
         Qualidade = qualidade;
         Cartoes = cartoes;
         Suspenso = suspenso;
+
     }
 
 
+    private void setDate(LocalDate date) {
+        this.Date = date;
+    }
 
-    public verficaCondicaoJogo(boolean suspenso, int cartoes){
-        Suspenso = suspenso;
+    public void verficaCondicaoJogo(int cartoes, boolean suspenso){
+
         Cartoes = cartoes;
-
-        JOptionPane.showMessageDialog(null,  "Este Jogador posssui " + Cartoes + "ele está suspenso?" + Suspenso, "Resultado", JOptionPane.PLAIN_MESSAGE);
-
+        Suspenso = suspenso;
+        if(Cartoes >= 3){
+            Suspenso = true;
+            System.out.println(Nome + ", " + "camisa: " + Numero + ", " + Posicao + ", Condição: este Jogador está suspenso");
+        }else 
+            System.out.println(Nome + ", " + "camisa: " + Numero + ", " + Posicao + ", Condição: este Jogador está disponível");
     }
+
+
 
 }
