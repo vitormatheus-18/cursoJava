@@ -181,7 +181,7 @@ public class JogadorTime {
     @Override
     public String toString() {
         
-        return Posicao + ": " + Numero + " - " + Nome + " | CONDIÇÃO: " + (Suspenso ? "Suspended" : "Can Play") + " | Qualidade: " + Qualidade;
+        return Posicao + ": " + Numero + " - " + Nome + " | CONDIÇÃO: " + (Suspenso ? "Suspenso" : "Pode Jogar") + " | Qualidade: " + Qualidade;
     }
 
 
