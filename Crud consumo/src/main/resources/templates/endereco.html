@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Vitor Correios</title>
+        
+        <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"  rel="stylesheet" />
+        
+        <link th:href="@{/webjars/bootstrap/css/bootstrap-theme.min.css}"  rel="stylesheet" />
+        
+        <link th:href="@{/webjars/font-awesome/css/font-awesome.min.css}"  rel="stylesheet" />
+
+    </head>
+
+    <body>       
+    
+        <div class="container">
+            <div class="page-header">
+                <h1>Informações da busca</h1>
+            </div>
+            
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>Cep</th>
+                        <th>Logradouro</th>
+                        <th>Complemento</th>
+                        <th>Bairro</th>
+                        <th>Localidade</th>
+                        <th>Uf</th>
+                        <th>ibge</th>
+                        <th>ddd</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <td th:text="${endereco.cep}"></td>
+                        <td th:text="${endereco.logradouro}"></td>
+                        <td th:text="${endereco.complemento}"></td>
+                        <td th:text="${endereco.bairro}"></td>
+                        <td th:text="${endereco.localidade}"></td>
+                        <td th:text="${endereco.uf}"></td>
+                        <td th:text="${endereco.ibge}"></td>
+                        <td th:text="${endereco.ddd}"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> 
+        <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    
+        <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+    </body>
+</html>
